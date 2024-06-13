@@ -17,6 +17,9 @@ header .head {
   justify-content: center;
   gap: 100px;
 }
+header .burger-menu {
+  display: none;
+}
 header .logo {
   margin-top: 10px;
 }
@@ -58,15 +61,59 @@ header .language p {
 header .login {
   margin-top: 20px;
 }
-header .login button {
+header .login h2 {
+  color: white;
+}
+header .login .popup {
+  position: fixed;
+  margin-left: -570px;
+  background-color: #FFA800;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 70px;
+  display: none;
+}
+header .login .popup .close {
+  color: white;
+  padding-left: 160px;
+  cursor: pointer;
+}
+header .login .popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+header .login .popup form div {
+  display: flex;
+  flex-direction: column;
+}
+header .login .popup form div input {
+  background-color: #f4f1f1;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+header .login .popup form button {
+  background-color: #B0CC0D;
+  border: none;
+  height: 20px;
+  color: rgb(254, 254, 254);
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+header .login #openPopup {
   display: flex;
   background-color: #FFA800;
   border: none;
   width: 140px;
   height: 35px;
   border-radius: 25px;
+  cursor: pointer;
 }
-header .login button a {
+header .login #openPopup p {
   margin-top: 7px;
   margin-left: 15px;
   font-size: 18px;
@@ -75,7 +122,7 @@ header .login button a {
   color: white;
   text-transform: uppercase;
 }
-header .login button img {
+header .login #openPopup img {
   margin-top: 4px;
   margin-left: 6px;
 }
@@ -148,12 +195,14 @@ header .login button img {
   border-radius: 20px;
 }
 .menu .food .food-menu {
+  height: 400px;
+  overflow: hidden;
+}
+.menu .food .food-menu .carousel {
   display: flex;
-  padding-bottom: 20px;
-  gap: 20px;
-  padding-top: 20px;
   justify-content: center;
-  padding-top: 60px;
+  margin-top: 50px;
+  gap: 35px;
 }
 .menu .food .food-menu .item {
   background-color: white;
@@ -185,6 +234,22 @@ header .login button img {
   font-weight: 600;
   margin-top: 50px;
   margin-left: 30px;
+}
+.menu .food .food-menu .controls {
+  transform: translateY(-50%);
+  display: flex;
+  margin-top: -140px;
+  justify-content: space-between;
+  z-index: 1;
+}
+.menu .food .food-menu .controls img {
+  width: 50px;
+}
+.menu .food .food-menu .controls .prev {
+  margin-left: 10px;
+}
+.menu .food .food-menu .controls .next {
+  margin-right: 10px;
 }
 .menu .food .p-1 {
   padding: 50px;
@@ -290,6 +355,14 @@ header .login button img {
   width: 700px;
 }
 
+.areas {
+  margin-top: 50px;
+}
+.areas h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
 .faq {
   margin-top: 50px;
 }
@@ -317,4 +390,167 @@ header .login button img {
 .form {
   display: flex;
   margin-top: 60px;
+  gap: 40px;
+}
+.form .img {
+  margin-top: -70px;
+  margin-left: -90px;
+}
+.form .info {
+  margin-top: 70px;
+  margin-left: -50px;
+}
+.form .info h3 {
+  font-size: 60px;
+  color: #B0CC0D;
+}
+.form form {
+  margin-top: 80px;
+}
+.form form .name-phone input {
+  background-color: #F4F4F4;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 5px;
+}
+.form form .name-phone input::-moz-placeholder {
+  padding-left: 20px;
+}
+.form form .name-phone input::placeholder {
+  padding-left: 20px;
+}
+.form form .email {
+  background-color: #F4F4F4;
+  outline: none;
+  border: none;
+  border-radius: 25px;
+  padding: 15px 95px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.form form a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background-color: #FFA800;
+  padding: 8px 150px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+footer {
+  background-color: #B0CC0D;
+}
+footer .foot {
+  display: flex;
+  justify-content: space-between;
+}
+footer .foot .img-1 {
+  margin-top: 50px;
+}
+footer .foot .img-2 {
+  position: relative;
+  width: 200px;
+}
+footer .foot ul {
+  display: flex;
+  gap: 30px;
+  margin-top: 70px;
+}
+footer .foot ul a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+}
+footer .foot ul li {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 80%;
+  }
+  #container2 {
+    width: 100%;
+  }
+  header .head {
+    display: flex;
+    gap: 10px;
+  }
+  header .head .burger-menu {
+    display: block;
+    margin-top: 20px;
+  }
+  header .head .menu-t {
+    display: none;
+  }
+  header .head .logo img {
+    width: 160px;
+  }
+  header .head .login .open {
+    display: none;
+  }
+  .main {
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .main .info {
+    padding-left: 30px;
+  }
+  .main .info h2 {
+    font-size: 50px;
+  }
+  .main .info p {
+    width: 75%;
+    font-size: 20px;
+    padding-top: 40px;
+  }
+  .main img {
+    display: none;
+  }
+  .menu .week {
+    flex-wrap: wrap;
+  }
+  .menu .food .fon {
+    width: 90%;
+  }
+  .menu .food .fon .calc h3 {
+    font-size: 16px;
+  }
+  .menu .food .fon .calc a {
+    padding: 5px 20px;
+  }
+  .adv .items {
+    flex-wrap: wrap;
+  }
+  .diet-fon .diet {
+    margin-left: 10px;
+  }
+  .diet-fon img {
+    display: none;
+  }
+  iframe {
+    width: 100%;
+  }
+  .faq .items {
+    flex-direction: column;
+  }
+  .form {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .form .info {
+    margin-top: -70px;
+    margin-left: 30px;
+  }
+  .form form {
+    margin-top: 0px;
+    margin-bottom: 40px;
+  }
+  footer .foot {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=style.css.map */

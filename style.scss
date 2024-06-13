@@ -13,11 +13,13 @@ body{
 }
 
 header{
-
     .head{
         display: flex;
         justify-content: center;
         gap: 100px;
+    }
+    .burger-menu{
+        display: none;
     }
     .logo{
         margin-top: 10px;
@@ -58,16 +60,64 @@ header{
             font-weight: 700;
         }
     }
+  
     .login{
         margin-top: 20px;
-        button{
+        h2{
+            color: white;
+        }
+        .popup{
+            position: fixed;
+            margin-left: -570px;
+            background-color: #FFA800;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 70px;
+            display: none;
+            .close{
+                color: white;
+                padding-left: 160px;
+                cursor: pointer;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                color: white;
+                div{
+                    display: flex;
+                    flex-direction: column;
+                    input{
+                        background-color: #f4f1f1;
+                        outline: none;
+                        border: none;
+                        border-radius: 5px;
+                     
+                    }
+                }
+                button{
+                    background-color: #B0CC0D;
+                    border: none;
+                    height: 20px;
+                    color: rgb(254, 254, 254);
+                    font-size: 14px;
+                    border-radius: 5px;
+                    font-weight: 500;
+                    cursor: pointer;
+                }
+            }
+         
+        }
+        #openPopup{
             display: flex;
             background-color: #FFA800;
             border: none;
             width: 140px;
             height: 35px;
             border-radius: 25px;
-            a{
+            cursor: pointer;
+            
+            p{
                 margin-top: 7px;
                 margin-left: 15px;
                 font-size: 18px;
@@ -81,8 +131,10 @@ header{
                 margin-left: 6px;
             }
         }
+     
     }
 }
+
 
 .main{
     background-color: #B0CC0D;
@@ -153,12 +205,14 @@ header{
         padding-bottom: 50px;
         border-radius: 20px;
         .food-menu{
-            display: flex;
-            padding-bottom: 20px;
-            gap: 20px;
-            padding-top: 20px;
-            justify-content: center;
-            padding-top: 60px;
+            height: 400px;
+            overflow: hidden;
+            .carousel{
+                display: flex;
+                justify-content: center;
+                margin-top: 50px;
+                gap: 35px;
+            }
             .item{
                 background-color: white;
                 width: 220px;
@@ -193,7 +247,24 @@ header{
                 }
             }
             }
+            .controls {
+                transform: translateY(-50%);
+                display: flex;
+                margin-top: -140px;
+                justify-content: space-between;
+                z-index: 1;
+                img{
+                    width: 50px;
+                }
+                .prev{
+                    margin-left: 10px;
+                }
+                .next{
+                    margin-right: 10px;
+                }
+            }
         }
+        
 
         .p-1{
             padding: 50px;
@@ -266,6 +337,8 @@ header{
     }
 }
 
+
+
 .diet-fon{
     background-color: #B0CC0D;
     margin-top: 60px;
@@ -306,6 +379,15 @@ header{
     }
 }
 
+.areas{
+    margin-top: 50px;
+    h2{
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+   
+}
+
 .faq{
    margin-top: 50px; 
    .items{
@@ -334,4 +416,199 @@ header{
 .form{
     display: flex;
     margin-top: 60px;
+    gap: 40px;
+    .img{
+        margin-top: -70px;
+        margin-left: -90px;
+    }
+    .info{
+        margin-top: 70px;
+        margin-left: -50px;
+        h3{
+            font-size: 60px;
+            color: #B0CC0D;
+        }
+    }
+    form{
+        margin-top: 80px;
+        .name-phone{
+            input{
+                background-color: #F4F4F4;
+                outline: none;
+                border: none;
+                border-radius: 25px;
+                padding: 15px 5px;
+            }
+            input::placeholder{
+                padding-left: 20px;
+            }
+        }
+        .email{
+            background-color: #F4F4F4;
+            outline: none;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 95px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        a{
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            background-color: #FFA800;
+            padding: 8px 150px;
+            text-align: center;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+           
+        }
+     
+    }
 }
+
+footer{
+    background-color: #B0CC0D;
+    .foot{
+        display: flex;
+        justify-content: space-between;
+        .img-1{
+            margin-top: 50px ;
+        }
+        .img-2{
+            position: relative;
+            width: 200px;
+           
+        }
+        ul{
+            display: flex;
+            gap: 30px;
+            margin-top: 70px;
+            a{
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+                font-size: 16px;
+                font-weight: 500;
+            }
+            li{
+                list-style-type: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:768px){
+    .container{
+        width: 80%;
+    }
+    #container2{
+        width: 100%;
+    }
+
+   header{
+    .head{
+        display: flex;
+        gap: 10px;
+        .burger-menu{
+            display: block;
+            margin-top: 20px;
+        }
+        .menu-t{
+            display: none;
+        }
+        .logo{
+            img{
+                width: 160px;
+            }
+        }
+        .login{
+            .open{
+                display: none;
+            }
+
+        }
+
+    }
+   }
+
+   .main{
+    height: auto;
+    padding-bottom: 20px;
+    .info{
+        padding-left: 30px;
+        h2{
+            font-size: 50px;
+        }
+        p{
+            width: 75%;
+            font-size: 20px;
+            padding-top: 40px;
+        }
+    }
+    img{
+        display: none;
+    }
+   }
+
+   .menu{
+    .week{
+        flex-wrap: wrap;
+    }
+    .food{
+        .fon{
+            width: 90%;
+            .calc{
+                h3{
+                    font-size: 16px;
+                }
+                a{
+                    padding: 5px 20px;
+                }
+            }
+        }
+    }
+   }
+
+   .adv{
+    .items{
+        flex-wrap: wrap;
+    }
+   }
+
+   .diet-fon{
+    .diet{
+        margin-left: 10px;
+       }
+       img{
+        display: none;
+       }
+   }
+   iframe {
+ 
+    width: 100%;
+   }
+   .faq{
+    .items{
+        flex-direction: column ;
+    }
+   }
+
+   .form{
+    flex-direction: column;
+    justify-content: center;
+    .info{
+        margin-top: -70px;
+        margin-left: 30px;
+    }
+    form{
+        margin-top: 0px;
+        margin-bottom: 40px;
+    }
+   }
+   footer{
+    .foot{
+        flex-direction: column;
+    }
+   }
+}
+

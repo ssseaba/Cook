@@ -10,11 +10,14 @@
 <body>
     <header class="container">
         <div class="head">
+            <div class="burger-menu">
+                <img src="img/burger.png" alt="">
+            </div>
             <div class="logo">
                 <img src="img/logo.png" alt="">
             </div>
             <div>
-                <ul>
+                <ul class="menu-t">
                     <a href=""><li>Menu</li></a>
                     <a href=""><li>Delivery</li></a>
                     <a href=""><li>FAQ</li></a>
@@ -35,8 +38,32 @@
                     </div>
                 </div>
             </div>
+
             <div class="login">
-                <button><img src="img/login.png" alt=""><a href="">sign in</a></button>
+                <button id="openPopup"><img src="img/login.png" alt=""><p>sign in</p></button>
+                <div id="popup" class="popup">
+                    <div class="popup-content">
+                        <span class="close">&times;</span>
+                        <h2>Регистрация</h2>
+                        <form>
+                            <div>
+                                <label for="name">Имя:</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+
+                            <div>
+                                <label for="password">Пароль:</label>
+                                <input type="password" id="password" name="password" required>
+                            </div>
+                            <button type="submit">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
@@ -66,37 +93,43 @@
         </div>
         <div class="food">
             <div class="food-menu">
-                <div class="item">
-                    <img src="img/as.png" alt="">
-                    <div class="info">
-                        <h3>BREAKFAST 2</h3>
-                        <p>Chicken fricassee with mushrooms and bulgur</p>
-                        <a href="">MORE</a>
+                <div class="carousel">
+                    <div class="item">
+                        <img src="img/as.png" alt="">
+                        <div class="info">
+                            <h3>BREAKFAST 2</h3>
+                            <p>Chicken fricassee with mushrooms and bulgur</p>
+                            <a href="">MORE</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/xc.png" alt="">
+                        <div class="info">
+                            <h3>Lunch</h3>
+                            <p>Chicken fricassee with mushrooms and bulgur</p>
+                            <a href="">MORE</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/sd.png" alt="">
+                        <div class="info">
+                            <h3>Snack</h3>
+                            <p>Chicken fricassee with mushrooms and bulgur</p>
+                            <a href="">MORE</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="img/jk.png" alt="">
+                        <div class="info">
+                            <h3>DINNER</h3>
+                            <p>Chicken fricassee with mushrooms and bulgur</p>
+                            <a href="">MORE</a>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="img/xc.png" alt="">
-                    <div class="info">
-                        <h3>Lunch</h3>
-                        <p>Chicken fricassee with mushrooms and bulgur</p>
-                        <a href="">MORE</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="img/sd.png" alt="">
-                    <div class="info">
-                        <h3>Snack</h3>
-                        <p>Chicken fricassee with mushrooms and bulgur</p>
-                        <a href="">MORE</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="img/jk.png" alt="">
-                    <div class="info">
-                        <h3>DINNER</h3>
-                        <p>Chicken fricassee with mushrooms and bulgur</p>
-                        <a href="">MORE</a>
-                    </div>
+                <div class="controls">
+                    <img class="prev" src="img/lev.png" alt="">
+                    <img class="next" src="img/pra.png" alt="">
                 </div>
             </div>
 
@@ -104,7 +137,7 @@
             <div class="fon">
                 <div class="calc">
                     <h3>Do you want to count your calories?</h3>
-                    <a href="">Order now</a>
+                    <a href="calories.html">Order now</a>
                 </div>
             </div>
         </div>
@@ -154,6 +187,11 @@
         </div>
     </div>
 
+    <div class="areas container">
+        <h2>Areas</h2>
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A70c1b8add16420e9b89b01f35387247deb672c9ee041c38612f81d3fa7d06df7&amp;width=1194&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+    </div>
+
     <div class="faq container">
         <h2>FAQ</h2>
         <div class="items">
@@ -184,30 +222,30 @@
         </div>
     </div>
 
-    <div class="form">
-        <div>
+    <div class="form container">
+        <div class="img">
             <img src="img/pom1.png" alt="">
         </div>
-        <div>
+        <div class="info">
             <h3>LET'S GET<br> IN TOUCH</h3>
             <p>Make orders, take part in promotions,<br>recommend us to friends or connect </p>
         </div>
         <form action="">
-            <div>
+            <div class="name-phone">
                 <input type="text" placeholder="Your name">
                 <input type="text" placeholder="Your phone number">
             </div>
             <div>
-                <input type="text" placeholder="Your E-mail">
+                <input class="email" type="text" placeholder="Your E-mail">
             </div>
-            <button>Submit</button>
+            <a href="">Submit</a>
         </form>
     </div>
 
-    <footer>
-        <div>
+    <footer id="container2">
+        <div class="foot container">
             <div>
-                <img src="img/logo.png" alt="">
+                <img class="img-1" src="img/logo 2.png" alt="">
             </div>
             <div>
                 <ul>
@@ -217,12 +255,37 @@
                     <a href=""><li>Contacts</li></a>
                 </ul>
             </div>
-            <div>
-                <img src="img/ft.png" alt="">
+            <div >
+                <img class="img-2" src="img/foot1.png" alt="">
             </div>
         </div>
     </footer>
 
-    <script src="/assets/js/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/login.js"></script>
+  <script>
+    $(document).ready(function() {
+    var carousel = $('.carousel');
+    var items = $('.item', carousel);
+    var prevBtn = $('.prev');
+    var nextBtn = $('.next');
+    var currentIndex = 0;
+    var itemWidth = items.first().outerWidth();
+
+    function updateCarousel() {
+        carousel.css('transform', 'translateX(-' + (currentIndex * itemWidth) + 'px)');
+    }
+
+    prevBtn.click(function() {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        updateCarousel();
+    });
+
+    nextBtn.click(function() {
+        currentIndex = (currentIndex + 1) % items.length;
+        updateCarousel();
+    });
+});
+  </script>
 </body>
 </html>
