@@ -432,12 +432,16 @@ header{
     form{
         margin-top: 80px;
         .name-phone{
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
             input{
                 background-color: #F4F4F4;
                 outline: none;
                 border: none;
                 border-radius: 25px;
-                padding: 15px 5px;
+                width: 100%;
+                height: 40px;
             }
             input::placeholder{
                 padding-left: 20px;
@@ -448,20 +452,30 @@ header{
             outline: none;
             border: none;
             border-radius: 25px;
-            padding: 15px 95px;
             margin-top: 10px;
+            width: 100%;
+            height: 40px;
             margin-bottom: 20px;
         }
-        a{
-            color: rgb(255, 255, 255);
-            text-decoration: none;
+        .email::placeholder{
+            padding-left: 20px;
+        }
+        .submit{
+            width: 100%;
             background-color: #FFA800;
-            padding: 8px 150px;
             text-align: center;
+            padding-top: 10px;
+            height: 30px;
             border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-           
+            a{
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                text-align: center;
+                border-radius: 20px;
+                font-size: 14px;
+                font-weight: 600;
+               
+            }
         }
      
     }
@@ -508,22 +522,36 @@ footer{
    header{
     .head{
         display: flex;
+        justify-content: space-around;
         gap: 10px;
         .burger-menu{
             display: block;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         .menu-t{
             display: none;
         }
         .logo{
             img{
-                width: 160px;
+                width: 150px;
+            }
+        }
+        .info{
+            .number{
+              p{
+                font-size: 14px;
+              }
             }
         }
         .login{
-            .open{
-                display: none;
+            #openPopup{
+                width: 38px;
+                p{
+                    display: none;
+                }
+                img{
+                    margin-left: 5px;
+                }
             }
 
         }
@@ -572,33 +600,67 @@ footer{
    .adv{
     .items{
         flex-wrap: wrap;
+        .img-1{
+         padding-left: 30px;
+        }
+        .img-2{
+         padding-left: 30px;
+        }
+        .img-3{
+         padding-left: 20px;
+        }
+        .img-4{
+         padding-left: 20px;
+        }
+        .img-5{
+         padding-left: 20px;
+        }
+        .item p{
+          
+        }
     }
    }
 
    .diet-fon{
     .diet{
         margin-left: 10px;
+        .info{
+            h2{
+                width: 80%;
+                font-size: 38px;
+            }
+            p{
+                width: 100%;
+            }
+        }
        }
        img{
         display: none;
        }
    }
    iframe {
- 
     width: 100%;
    }
+
    .faq{
     .items{
-        flex-direction: column ;
+       flex-wrap: wrap;
+       justify-content: center;
     }
    }
 
    .form{
     flex-direction: column;
     justify-content: center;
+    .img{
+        margin-left: 0px;
+        img{
+            width: 100%;
+        }
+    }
     .info{
         margin-top: -70px;
-        margin-left: 30px;
+        margin-left: 10px;
     }
     form{
         margin-top: 0px;
@@ -608,7 +670,44 @@ footer{
    footer{
     .foot{
         flex-direction: column;
+        padding-bottom: 20px;
+        ul{
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .img-2{
+            display: none;
+        }
     }
    }
+}
+
+@media screen and (max-width:570px) {
+    header{
+        .number{
+            display: none;
+        }
+    }
+
+    .main{
+        .info{
+            padding-left: 20px;
+            h2{
+                font-size: 38px;
+                line-height: 40px;
+            }
+        }
+    }
+    .diet-fon{
+        .diet{
+            margin-left: -10px;
+            .info{
+                h2{
+                    font-size: 35px;
+                }
+            }
+        }
+    }
 }
 
